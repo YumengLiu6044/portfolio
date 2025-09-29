@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import {
 	emailJSPublicKey,
 	emailJSServiceID,
@@ -8,6 +8,8 @@ import Section from "../Section";
 import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+	const resetRef = useRef<HTMLButtonElement>(null);
+
 	useEffect(() => {
 		emailjs.init({
 			publicKey: emailJSPublicKey,
@@ -33,7 +35,7 @@ export default function Contact() {
 				alert("Failed to send message. Please try again later.");
 			})
 			.finally(() => {
-				e.currentTarget.reset();
+				resetRef.current?.click();
 			});
 	};
 
@@ -57,7 +59,7 @@ export default function Contact() {
 					<label htmlFor="message">Message</label>
 					<textarea name="message" id="message" className="min-h-[70px]"required />
 					<div className="flex w-full justify-between">
-            <button type="reset" className="btn-secondary">
+            <button type="reset" className="btn-secondary" ref={resetRef}>
               Clear
               <i className="bi bi-trash3 font-medium"></i>
             </button>
