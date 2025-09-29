@@ -28,7 +28,7 @@ export function NavbarSection() {
 					<i className="bi bi-list text-[40px]"></i>
 				</button>
 				{isOpen && (
-					<div className="absolute top-[80px] bg-blue-100 border-2 border-blue-400 rounded-xl flex flex-col gap-5 p-4 font-bold text-xl">
+					<div className="absolute top-[90px] bg-blue-100 border-2 border-blue-400 rounded-xl flex flex-col gap-5 p-4 font-bold text-xl">
 						{navBarItems.map((item, index) => (
 							<a
 								key={index}

@@ -4,7 +4,7 @@ import { headShot } from "../../assets/assets";
 export default function About() {
 	return (
 		<Section className="bg-blue-100 text-blue-400" id="about">
-			<div className="w-full h-full flex flex-col md:flex-row md:gap-10 lg:gap-16 items-center">
+			<div className="w-full h-full flex flex-col md:flex-row gap-5 md:gap-10 lg:gap-16 items-center">
 				<div className="min-w-[250px] max-w-[320px] w-full h-fit bg-gradient-to-br from-blue-400 to-blue-200 p-2 rounded-[48px] self-center md:self-auto">
 					<img src={headShot} className="w-full rounded-[48px]"></img>
 				</div>

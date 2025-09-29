@@ -12,8 +12,6 @@
 }
 
 .hover-text {
-  position: relative;
-  display: inline-block;
   border-bottom: 4px solid transparent;
   transition: border-color 0.3s ease;
 }
