@@ -24,6 +24,7 @@ export function SocialSection() {
 					href={item.href}
 					className="text-[50px] hover:scale-110 transition-transform duration-300 "
 					target="_blank"
+          aria-label={item.name}
 				>
 					<i className={item.icon}></i>
 				</a>

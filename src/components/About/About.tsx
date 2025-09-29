@@ -17,7 +17,7 @@ export default function About() {
 						right now.
 					</p>
 					<a href="#contact" className="w-full flex justify-end">
-						<h2 className="hover-text">Contact Me</h2>
+						<h3 className="hover-text">Contact Me</h3>
 					</a>
 				</div>
 			</div>
