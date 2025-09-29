@@ -121,3 +121,7 @@ export const experiences: Experience[] = [
 		]
 	},
 ];
+
+export const emailJSPublicKey = import.meta.env.VITE_EMAILJS_PUB_KEY;
+export const emailJSServiceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+export const emailJSTemplateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
