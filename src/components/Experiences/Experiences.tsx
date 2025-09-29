@@ -12,7 +12,7 @@ export default function Experiences() {
 						key={index}
 					>
 						<div className="max-w-[250px] w-full flex flex-col items-center gap-5">
-							<p className="leading-[40px] text-center font-medium">
+							<p className="leading-[40px] text-center">
 								{experience.company}
 							</p>
 							<img
@@ -39,7 +39,7 @@ export default function Experiences() {
 										>
 											<div className="flex gap-5">
 												<p className="font-medium">•</p>
-												<p key={descIndex}>{desc}</p>
+												<span className="text-xl md:text-2xl" key={descIndex}>{desc}</span>
 											</div>
 										</li>
 									)
