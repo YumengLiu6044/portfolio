@@ -57,7 +57,7 @@ export const experiences: Experience[] = [
 	{
 		company: "ValueGlance",
 		logo: valueGlanceLogo,
-		position: "Frontend Developer Intern",
+		position: "Frontend Engineer Intern",
 		duration: "May 2025 - Sep 2025",
 		description: [
 			"Engineered 5+ major frontend features in a ReactJS codebase, ensuring responsiveness and accessibility",
