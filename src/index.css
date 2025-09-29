@@ -19,24 +19,21 @@
 }
 
 .hover-text:hover {
-  border-color: var(--color-blue-200);
+  border-color: currentColor;
 }
 
 h2 {
   font-size: 3rem;
   font-weight: 550;
-  color: var(--color-blue-400);
 }
 
 h3 {
   font-size: 2.5rem;
   font-weight: 500;
-  color: var(--color-blue-400);
 }
 
 p {
   font-size: 1.75rem;
-  color: var(--color-blue-400);
 }
 
 html {

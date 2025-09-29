@@ -1,11 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-
-export const navBarItems = [
-	{ name: "About", href: "#about" },
-	{ name: "Projects", href: "#projects" },
-	{ name: "Experience", href: "#experience" },
-	{ name: "Contact", href: "#contact" },
-];
+import { navBarItems } from "../../constants";
 
 export function NavbarSection() {
 	const [isOpen, setIsOpen] = useState(false);
