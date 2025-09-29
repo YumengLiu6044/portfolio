@@ -49,7 +49,7 @@ export function NavbarSection() {
 				)}
 			</div>
 
-			<div className="hidden lg:flex gap-3 lg:gap-10 font-bold text-xl">
+			<div className="hidden lg:flex gap-3 lg:gap-10 font-semibold text-3xl">
 				{navBarItems.map((item, index) => (
 					<a key={index} href={item.href} className="hover-text">
 						{item.name}

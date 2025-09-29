@@ -2,19 +2,43 @@
 @import 'bootstrap-icons/font/bootstrap-icons.css';
 
 @theme {
-  --color-blue-100: #D0E3F9;
+  --color-blue-100: #E4F0FD;
   --color-blue-200: #7598C1;
   --color-blue-300: #496D96;
   --color-blue-400: #3D5169;
+}
+:root {
+  font-family: Outfit
 }
 
 .hover-text {
   position: relative;
   display: inline-block;
-  border-bottom: 2px solid transparent;
+  border-bottom: 4px solid transparent;
   transition: border-color 0.3s ease;
 }
 
 .hover-text:hover {
-  border-color: var(--color-blue-400);
+  border-color: var(--color-blue-200);
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 550;
+  color: var(--color-blue-400);
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--color-blue-400);
+}
+
+p {
+  font-size: 1.75rem;
+  color: var(--color-blue-400);
+}
+
+html {
+  scroll-behavior: smooth;
 }
