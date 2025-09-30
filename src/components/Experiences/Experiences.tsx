@@ -17,6 +17,7 @@ export default function Experiences() {
 							</p>
 							<img
 								src={experience.logo}
+								alt={experience.company + " logo"}
 								className="rounded-[30px] w-full"
 							></img>
 						</div>

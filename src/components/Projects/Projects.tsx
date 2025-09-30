@@ -25,6 +25,7 @@ export default function Projects() {
 							<div className="p-5 w-full max-w-[220px] aspect-square">
 								<img
 									src={project.image}
+									alt={project.name + " logo"}
 									className="w-full"
 								></img>
 							</div>
