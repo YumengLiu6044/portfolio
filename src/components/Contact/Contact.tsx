@@ -6,6 +6,7 @@ import {
 } from "../../constants";
 import Section from "../Section";
 import emailjs from "@emailjs/browser";
+import DOMPurify from "dompurify";
 
 export default function Contact() {
 	const resetRef = useRef<HTMLButtonElement>(null);
@@ -20,13 +21,14 @@ export default function Contact() {
 		e.preventDefault();
 
 		const formData = new FormData(e.currentTarget);
+		const sanitizedBody = {
+			title: DOMPurify.sanitize(formData.get("subject") as string),
+			message: DOMPurify.sanitize(formData.get("message") as string),
+			email: DOMPurify.sanitize(formData.get("user_email") as string),
+		};
 
 		emailjs
-			.send(emailJSServiceID, emailJSTemplateID, {
-				title: formData.get("subject") as string,
-				message: formData.get("message") as string,
-				email: formData.get("user_email") as string,
-			})
+			.send(emailJSServiceID, emailJSTemplateID, sanitizedBody)
 			.then((_) => {
 				alert("Message received! I will get back to you soon.");
 			})
