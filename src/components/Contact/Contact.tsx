@@ -1,6 +1,5 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import {
-	emailJSPublicKey,
 	emailJSServiceID,
 	emailJSTemplateID,
 } from "../../constants";
@@ -10,12 +9,6 @@ import DOMPurify from "dompurify";
 
 export default function Contact() {
 	const resetRef = useRef<HTMLButtonElement>(null);
-
-	useEffect(() => {
-		emailjs.init({
-			publicKey: emailJSPublicKey,
-		});
-	}, []);
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
