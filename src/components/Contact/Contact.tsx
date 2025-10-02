@@ -44,29 +44,54 @@ export default function Contact() {
 			<div className="w-full items-center flex flex-col gap-10">
 				<h2>Get In Touch</h2>
 				<form
-					className="w-full max-w-3xl flex flex-col gap-5"
+					className="w-full max-w-3xl flex flex-col gap-3 lg:gap-5"
 					onSubmit={handleSubmit}
 				>
-					<label htmlFor="user_email">Your Email</label>
-					<input
-						type="email"
-						id="user_email"
-						name="user_email"
-						required
-					/>
-					<label htmlFor="subject">Subject</label>
-					<input type="text" id="subject" name="subject" required />
-					<label htmlFor="message">Message</label>
-					<textarea name="message" id="message" className="min-h-[70px]"required />
+					<div>
+						<label htmlFor="user_email">Your Email</label>
+						<input
+							type="email"
+							id="user_email"
+							name="user_email"
+							className="w-full"
+							required
+						/>
+					</div>
+					<div>
+						<label htmlFor="subject">Subject</label>
+						<input
+							type="text"
+							id="subject"
+							name="subject"
+							required
+							className="w-full"
+						/>
+					</div>
+					<div>
+						<label htmlFor="message">Message</label>
+						<textarea
+							name="message"
+							id="message"
+							className="min-h-[70px] w-full"
+							required
+						/>
+					</div>
 					<div className="flex w-full justify-between">
-            <button type="reset" className="btn-secondary" ref={resetRef}>
-              Clear
-              <i className="bi bi-trash3 font-medium"></i>
-            </button>
-					  <button type="submit" className="btn-primary flex gap-3">
-              Send
-              <i className="bi bi-send-fill"></i>
-  					</button>
+						<button
+							type="reset"
+							className="btn-secondary"
+							ref={resetRef}
+						>
+							Clear
+							<i className="bi bi-trash3 font-medium"></i>
+						</button>
+						<button
+							type="submit"
+							className="btn-primary flex gap-3"
+						>
+							Send
+							<i className="bi bi-send-fill"></i>
+						</button>
 					</div>
 				</form>
 			</div>
