@@ -1,16 +1,19 @@
-import { useRef } from "react";
-import {
-	emailJSServiceID,
-	emailJSTemplateID,
-} from "../../constants";
+import { useCallback, useRef, useState } from "react";
+import { emailJSServiceID, emailJSTemplateID } from "../../constants";
 import Section from "../Section";
 import emailjs from "@emailjs/browser";
 import DOMPurify from "dompurify";
+import { toast, Toaster } from "sonner";
 
 export default function Contact() {
 	const resetRef = useRef<HTMLButtonElement>(null);
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const [isLoading, setIsLoading] = useState(false);
+
+	const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+		if (isLoading) return;
+		setIsLoading(true);
+
 		e.preventDefault();
 
 		const formData = new FormData(e.currentTarget);
@@ -23,19 +26,29 @@ export default function Contact() {
 		emailjs
 			.send(emailJSServiceID, emailJSTemplateID, sanitizedBody)
 			.then((_) => {
-				alert("Message received! I will get back to you soon.");
+				toast.success("Message sent! I will get back to you soon.");
 			})
 			.catch((error) => {
 				console.error("Failed to send message:", error);
-				alert("Failed to send message. Please try again later.");
+				toast.error("Failed to send message. Please try again later.");
 			})
 			.finally(() => {
+				setIsLoading(false);
 				resetRef.current?.click();
 			});
-	};
+	}, []);
 
 	return (
 		<Section className="bg-blue-200 text-white" id="contact">
+			<Toaster
+				toastOptions={{
+					classNames: {
+						toast: "!shadow-lg",
+						title: "!text-blue-300 !font-['Outfit']",
+						icon: "!text-blue-300",
+					},
+				}}
+			></Toaster>
 			<div className="w-full items-center flex flex-col gap-10">
 				<h2>Get In Touch</h2>
 				<form
@@ -85,7 +98,13 @@ export default function Contact() {
 							className="btn-primary flex gap-3"
 						>
 							Send
-							<i className="bi bi-send-fill"></i>
+							<i
+								className={`bi ${
+									isLoading
+										? "bi-arrow-repeat animate-spin"
+										: "bi-send-fill"
+								}`}
+							></i>
 						</button>
 					</div>
 				</form>
