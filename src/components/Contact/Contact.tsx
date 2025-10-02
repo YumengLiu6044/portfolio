@@ -50,9 +50,9 @@ export default function Contact() {
 				}}
 			></Toaster>
 			<div className="w-full items-center flex flex-col gap-10">
-				<h2>Get In Touch</h2>
+				<h2 className="large-text font-semibold">Get In Touch</h2>
 				<form
-					className="w-full max-w-3xl flex flex-col gap-3 lg:gap-5"
+					className="w-full max-w-3xl flex flex-col gap-3 lg:gap-5 medium-text"
 					onSubmit={handleSubmit}
 				>
 					<div>

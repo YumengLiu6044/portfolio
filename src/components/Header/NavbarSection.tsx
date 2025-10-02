@@ -33,7 +33,7 @@ export function NavbarSection() {
 							<a
 								key={index}
 								href={item.href}
-								className="hover-text"
+								className="hover-text medium-text"
 								onClick={() => setIsOpen(false)}
 							>
 								{item.name}
@@ -45,7 +45,7 @@ export function NavbarSection() {
 
 			<div className="hidden lg:flex gap-3 lg:gap-10 font-semibold text-3xl">
 				{navBarItems.map((item, index) => (
-					<a key={index} href={item.href} className="hover-text">
+					<a key={index} href={item.href} className="hover-text medium-text">
 						{item.name}
 					</a>
 				))}

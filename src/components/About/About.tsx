@@ -9,15 +9,15 @@ export default function About() {
 					<img src={headShot} className="w-full rounded-[48px]" alt="Yumeng Liu's Headshot"></img>
 				</div>
 				<div className="flex flex-col h-full justify-between">
-					<h2>Hi, I'm Yumeng Liu</h2>
-					<p>
+					<h2 className="large-text font-semibold">Hi, I'm Yumeng Liu</h2>
+					<p className="medium-text leading-[45px]">
 						I study Computer Science at UC Irvine. I have experience
 						with iOS development, full-stack web development, as
 						well as machine learning. Check out what I am working on
 						right now.
 					</p>
 					<a href="#contact" className="w-full flex justify-end">
-						<h3 className="hover-text">Contact Me</h3>
+						<h3 className="hover-text large-text font-medium">Contact Me</h3>
 					</a>
 				</div>
 			</div>

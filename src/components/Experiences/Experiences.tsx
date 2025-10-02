@@ -5,14 +5,14 @@ export default function Experiences() {
 	return (
 		<Section className="bg-blue-100 text-blue-400" id="experiences">
 			<div className="flex flex-col gap-8 md:gap-10 items-center">
-				<h2 className="pb-[10px] lg:pb-[30px]">Experiences</h2>
+				<h2 className="pb-[10px] lg:pb-[30px] large-text font-semibold">Experiences</h2>
 				{experiences.map((experience, index) => (
 					<div
 						className="w-full flex flex-col md:flex-row gap-10 items-center md:items-start"
 						key={index}
 					>
 						<div className="max-w-[250px] w-full hidden lg:flex flex-col items-center gap-5">
-							<p className="leading-[35px] text-center">
+							<p className="leading-[35px] text-center small-text">
 								{experience.company}
 							</p>
 							<img
@@ -30,10 +30,10 @@ export default function Experiences() {
 								></img>
 
 								<div className="h-full flex flex-col justify-between">
-									<div className="text-xl md:text-2xl lg:text-3xl font-medium">
+									<div className="font-medium medium-text">
 										{experience.position}
 									</div>
-									<div className="md:text-lg lg:text-xl">
+									<div className="small-text">
 										{experience.duration}
 									</div>
 								</div>
@@ -49,7 +49,7 @@ export default function Experiences() {
 											<div className="flex gap-5">
 												<p className="font-medium">•</p>
 												<span
-													className="text-xl md:text-2xl"
+													className="small-text"
 													key={descIndex}
 												>
 													{desc}
@@ -64,7 +64,7 @@ export default function Experiences() {
 								{experience.skills.map((skill, skillIndex) => (
 									<div
 										key={skillIndex}
-										className="text-lg md:text-2xl px-5 py-0.5 lg:px-[60px] lg:py-1 bg-blue-200 text-white rounded-full"
+										className="small-text px-5 py-0.5 lg:px-[60px] lg:py-1 bg-blue-200 text-white rounded-full"
 									>
 										{skill}
 									</div>
@@ -77,7 +77,7 @@ export default function Experiences() {
 					<a
 						href={linkedInUrl}
 						target="_blank"
-						className="hover-text"
+						className="hover-text large-text font-medium"
 					>
 						<h3>Go to My LinkedIn</h3>
 					</a>

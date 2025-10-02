@@ -12,7 +12,7 @@ export default function Projects() {
 	return (
 		<Section className="bg-blue-200 text-white" id="projects">
 			<div className="w-full flex flex-col items-center gap-8">
-				<h2>Top Projects</h2>
+				<h2 className="large-text font-semibold">Top Projects</h2>
 				<div className="w-full flex flex-col gap-10 lg:flex-row">
 					{projects.map((project, index) => (
 						<div
@@ -29,7 +29,7 @@ export default function Projects() {
 									className="w-full"
 								></img>
 							</div>
-							<h3 className="bg-blue-200 w-full rounded-b-[35px] text-center p-2">
+							<h3 className="bg-blue-200 w-full rounded-b-[35px] text-center p-2 medium-text font-medium">
 								{project.name}
 							</h3>
 						</div>
@@ -38,11 +38,11 @@ export default function Projects() {
 				<div className="w-full flex justify-end">
 					<a
 						href={baseGithubUrl}
-						className="hover-text hover:border-b-white"
 						target="_blank"
 						rel="noreferrer"
+						className="hover-text"
 					>
-						<h3 className="">Go to My Github</h3>
+						<h3 className="large-text font-medium">Go to My Github</h3>
 					</a>
 				</div>
 			</div>
