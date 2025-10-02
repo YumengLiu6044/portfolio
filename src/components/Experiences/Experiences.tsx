@@ -4,15 +4,15 @@ import Section from "../Section";
 export default function Experiences() {
 	return (
 		<Section className="bg-blue-100 text-blue-400" id="experiences">
-			<div className="flex flex-col gap-5 md:gap-8 items-center">
-				<h2 className="pb-[30px] md:pb-[80px]">Experiences</h2>
+			<div className="flex flex-col gap-8 md:gap-10 items-center">
+				<h2 className="pb-[10px] lg:pb-[30px]">Experiences</h2>
 				{experiences.map((experience, index) => (
 					<div
 						className="w-full flex flex-col md:flex-row gap-10 items-center md:items-start"
 						key={index}
 					>
-						<div className="max-w-[250px] w-full flex flex-col items-center gap-5">
-							<p className="leading-[40px] text-center">
+						<div className="max-w-[250px] w-full hidden lg:flex flex-col items-center gap-5">
+							<p className="leading-[35px] text-center">
 								{experience.company}
 							</p>
 							<img
@@ -22,12 +22,20 @@ export default function Experiences() {
 							></img>
 						</div>
 						<div className="w-full flex flex-col gap-7">
-							<div className="flex justify-between">
-								<div className="text-xl md:text-2xl lg:text-3xl font-medium">
-									{experience.position}
-								</div>
-								<div className="text-lg md:text-xl lg:text-2xl">
-									{experience.duration}
+							<div className="flex h-[60px] gap-3">
+								<img
+									src={experience.logo}
+									alt={experience.company + " logo"}
+									className="block lg:hidden rounded-[15px] h-full w-auto object-contain"
+								></img>
+
+								<div className="h-full flex flex-col justify-between">
+									<div className="text-xl md:text-2xl lg:text-3xl font-medium">
+										{experience.position}
+									</div>
+									<div className="md:text-lg lg:text-xl">
+										{experience.duration}
+									</div>
 								</div>
 							</div>
 
@@ -40,18 +48,23 @@ export default function Experiences() {
 										>
 											<div className="flex gap-5">
 												<p className="font-medium">•</p>
-												<span className="text-xl md:text-2xl" key={descIndex}>{desc}</span>
+												<span
+													className="text-xl md:text-2xl"
+													key={descIndex}
+												>
+													{desc}
+												</span>
 											</div>
 										</li>
 									)
 								)}
 							</ul>
 
-							<div className="flex flex-wrap gap-5">
+							<div className="flex flex-wrap gap-3 lg:gap-5">
 								{experience.skills.map((skill, skillIndex) => (
 									<div
 										key={skillIndex}
-										className="text-2xl px-[60px] py-1 bg-blue-200 text-white rounded-full"
+										className="text-lg md:text-2xl px-5 py-0.5 lg:px-[60px] lg:py-1 bg-blue-200 text-white rounded-full"
 									>
 										{skill}
 									</div>
