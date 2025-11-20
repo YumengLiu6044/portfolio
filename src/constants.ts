@@ -1,7 +1,7 @@
 import {
+	cloudDriveLogo,
 	humunLogo,
 	matchaLogo,
-	mengChatLogo,
 	outlierLogo,
 	stockDasherLogo,
 	uciLogo,
@@ -19,9 +19,9 @@ export const projects: Project[] = [
 		url: baseGithubUrl + "matcha",
 	},
 	{
-		name: "MengChat",
-		image: mengChatLogo,
-		url: baseGithubUrl + "Chat-With-Meng",
+		name: "Cloud Drive",
+		image: cloudDriveLogo,
+		url: baseGithubUrl + "cloud-drive",
 	},
 	{
 		name: "Stock Dasher",
